@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body{
+    font-family: 'Roboto', sans-serif;
+} */
+
+.grid{
+    height: 100vh;
+    /* outline: 3px solid #000;
+    margin: 10px auto; */
+    background: cadetblue;
+    font-family: 'Roboto', sans-serif;
+    gap: 10px;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr) ;
+    grid-template-rows: repeat(6, 1fr) ;
+    grid-template-areas:
+    "nav nav nav nav nav nav"
+    "header header header header header header"
+    "main main sidebar sidebar sidebar sidebar "
+    "section section sidebar sidebar sidebar sidebar"
+    "footer footer footer footer footer footer"
+    "footer footer footer footer footer footer"; 
+}
+
+.grid__item{
+    font-size: 2rem;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.nav{
+    background: hotpink;
+    grid-area: nav;
+    /* background-image: url(img/quino-al-mBQIfKlvowM-unsplash.jpg);
+    background-position: center;
+    background-size: cover; */
+  
+}
+
+.header{
+    background: grey;
+    grid-area: header;
+    /* background-image: url(img/pexels-pixabay-64219.jpg);
+    background-position: center;
+    background-size: cover; */
+   
+
+}
+
+.main{
+    background: #ffd60a;
+    grid-area: main;
+    /* background-image: url(img/pexels-pixabay-147413.jpg);
+    background-position: center;
+    background-size: cover; */
+
+}
+
+.section{
+    background: chartreuse;
+    grid-area: section;
+    /* background-image: url(img/pexels-alexander-grey-1191710.jpg);
+    background-position: center;
+    background-size: cover; */
+   
+}
+
+.sidebar{
+    background: #00f5d4;
+    grid-area: sidebar;
+    /* background-image: url(img/zhang-liven-JNbcL91ofQE-unsplash\ \(1\).jpg);
+    background-position: center;
+    background-size: cover; */
+
+}
+
+.footer{
+    background: #a663cc;
+    grid-area: footer;
+    /* background-image: url(img/wilmer-martinez-8WR86Z_mLms-unsplash.jpg);
+    background-position: center;
+    background-size: cover; */
+
+}
+
+@media screen and (max-width:500px){
+    .grid{
+        grid-template-columns:repeat(2, 1fr);
+        grid-template-rows:repeat(4, 1fr);
+        grid-template-areas:
+        "header header nav nav"
+        "main main main main"
+    "section section sidebar sidebar"
+    "footer footer footer footer";
+
+    }
+}
